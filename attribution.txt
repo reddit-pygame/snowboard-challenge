@@ -1,0 +1,48 @@
+LICENSES
+
+CC-BY 3.0        http://creativecommons.org/licenses/by/3.0/legalcode
+CC-BY-SA 3.0   http://creativecommons.org/licenses/by-sa/3.0/legalcode
+CC-BY-NC 3.0  http://creativecommons.org/licenses/by-nc/3.0/
+CC0                 https://creativecommons.org/publicdomain/zero/1.0/legalcode
+OGA-BY-3.0     http://static.opengameart.org/OGA-BY-3.0.txt
+
+CODE
+
+All code is CC0-licensed.
+
+
+GRAPHICS
+
+Graphics are my own work (like you couldn't tell) and are CC0-licensed.
+
+
+SOUNDS
+
+File name: wind.ogg
+Source: http://opengameart.org/content/wind1
+Author: http://opengameart.org/users/lukerustltd
+License: CC0
+
+File name: boing1.ogg
+Source: https://www.freesound.org/people/lmbubec/sounds/119795/ 
+Author: https://www.freesound.org/people/Imbubec/
+License: CC0
+
+File name: boing2.ogg
+Source: https://www.freesound.org/people/lmbubec/sounds/119794/ 
+Author: https://www.freesound.org/people/Imbubec/
+License: CC0
+
+File name: elfgrunt.ogg
+Source: https://www.freesound.org/people/snaginneb/sounds/90164/
+Author: https://www.freesound.org/people/snaginneb/
+License: CC0
+
+File name: edgegrind.ogg
+Source: https://www.freesound.org/people/qubodup/sounds/171399/ 
+Author:  Iwan Gabovitch (http://qubodup.net/)
+License: CC-BY3
+
+edgegrind.ogg is derived from Spray Effect which is derived from Video codec audio glitches
+Video codec audio glitches Copyright 2012 laspaziale, CC-BY3 license.
+Spray Effect Copyright 2012 Iwan Gabovitch, CC-BY3 license
