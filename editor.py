@@ -17,33 +17,7 @@ class Editor(GameState):
     def __init__(self):
         super(Editor, self).__init__()
         self.next_state = "MAIN_MENU"
-        
-        #remove for challenge
-        self.icons = ButtonGroup()
-        icons = tools.strip_from_sheet(prepare.GFX["icon-strip"],
-                                                       (0, 0), (48, 48), 8)   
-        icon_classes = (Tree, Rock, RightGate, LeftGate, Jump,
-                                GreenSign, BlueSign, BlackSign)
-        left = 20
-        top = 20
-        for icon, klass in zip(icons, icon_classes):
-            Button((left, top), self.icons, idle_image=icon, hover_image=icon,
-                       call=self.set_current_object, args=klass)
-            top += 54
-        self.set_current_object(Tree)
-        
-    def set_current_object(self, klass):
-        self.current_object = klass
-        
-    def add_object(self, screen_pos):        
-        screenx, screeny  = screen_pos
-        viewx, viewy = self.course.view_rect.topleft
-        x, y = screenx + viewx, screeny + viewy
-        sprite = self.current_object((x, y), self.course.obstacles)
-        for rect_info in self.course.sections:
-            if pg.Rect(rect_info).collidepoint(sprite.rect.midbottom):
-                self.course.sections[rect_info].add(sprite)
-        
+
     def startup(self, persistent):
         """Creates a Course object from the previously selected JSON file."""
         self.persist = persistent
@@ -74,13 +48,7 @@ class Editor(GameState):
         elif event.type == pg.KEYUP:
             if event.key == pg.K_ESCAPE:
                 self.save_to_json()
-                self.done = True                
-        elif event.type == pg.MOUSEBUTTONUP:
-            if event.button == 1:
-                if not any((x.rect.collidepoint(event.pos) for x in self.icons)):
-                    self.add_object(event.pos)
-            
-        self.icons.get_event(event)
+                self.done = True
         
     def scroll(self, dt, mouse_pos):
         """Move the view rect when the mouse is at the edge of the screen."""
@@ -99,18 +67,8 @@ class Editor(GameState):
         
     def update(self, dt):
         mouse_pos = pg.mouse.get_pos()
-        if pg.mouse.get_pressed()[2]:
-            mousex, mousey = mouse_pos
-            viewx, viewy = self.course.view_rect.topleft
-            x, y = mousex + viewx, mousey + viewy
-            for sprite in self.course.obstacles:
-                if sprite.rect.collidepoint((x, y)):
-                    sprite.kill()
-        self.scroll(dt, mouse_pos)
-        self.icons.update(mouse_pos)
-        
+        self.scroll(dt, mouse_pos)        
         
     def draw(self, surface):
         surface.fill(pg.Color(242, 255, 255))
         self.course.draw(surface)
-        self.icons.draw(surface)
