@@ -4,8 +4,12 @@ Grab your wax and your pointy hat - it's time to shred it up on the slopes. This
  focuses on implementing a simple map editor that allows the user to create and edit their 
  own ski slope. The provided code allows the user to control a snowboarding elf. Courses 
  are loaded and saved as JSON files located in resources\courses.
-
+ 
+Github repo: https://github.com/reddit-pygame/snowboard-challenge
+ 
 #How it Works
+
+Run *main.py* to play.
 
 ##Game States
 
@@ -70,8 +74,8 @@ The Course class contains a self.view_rect attribute which is a screen-sized rec
  travel from the top lifthut to the bottom lifhut. The timer should reset for each run down the slope.
 
 **Rocky Mountain Highs** Implement high score functionality that keeps track of the best times for
- each course. The best time for the course should be displayed along with the player's current time.
- Completing this achievement will also require completing Of the Essence. 
+ each course. While snowboarding, the best time for the course should be displayed along with the
+ player's current time. Completing this achievement will also require completing Of the Essence. 
 
 **Checkpoint Gnarly** In addition to keeping track of the total time to get down the mountain, keep
  track of how long it takes to reach certain checkpoints. Use these checkpoint times to compare the
@@ -82,8 +86,6 @@ The Course class contains a self.view_rect attribute which is a screen-sized rec
 
 **Kriss Kross'll Make Ya** There is a Jump class in obstacles.py, but jumping is unimplemented.
  If the player is facing downhill when they hit a jump they should catch some air, not facing downhill
- should cause a crash. Completing this achievement will require modifications/additions to the
- Snowboarder and Jump classes.
-
-
+ should cause a crash. Completing this achievement will require extensive modifications/additions to
+ the base code.
 
