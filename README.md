@@ -5,7 +5,7 @@ Grab your wax and your pointy hat - it's time to shred it up on the slopes. This
  own ski slope. The provided code allows the user to control a snowboarding elf. Courses 
  are loaded and saved as JSON files located in resources\courses.
  
-Github repo: https://github.com/reddit-pygame/snowboard-challenge
+Challenge thread: https://www.reddit.com/r/pygame/comments/3vsc5x/challenge_all_downhill_from_here/
  
 #How it Works
 
@@ -13,19 +13,19 @@ Run *main.py* to play.
 
 ##Game States
 
-*MainMenu* Choose from playing or editing an existing course or creating a new one
+**MainMenu** Choose from playing or editing an existing course or creating a new one
 
-*CourseSelectPlay* Select one of the existing courses to play
+**CourseSelectPlay** Select one of the existing courses to play
 
-*Boarding* Hit the slopes
+**Boarding** Hit the slopes
 
-*CourseSelectEdit* Select an existing course to edit
+**CourseSelectEdit* Select an existing course to edit
 
-*CourseInfoEntry* Allows the user to input the name and map size for a new course NOTE:
+**CourseInfoEntry** Allows the user to input the name and map size for a new course NOTE:
  For course names, dashes ("-") will be replaced by spaces (" ") to allow spaces in course
  names without spaces in the filename. 
 
-*Editor* You will need to modify this class to allow the user to edit the course
+**Editor** You will need to modify this class to allow the user to edit the course
 
 
 ##Obstacles
